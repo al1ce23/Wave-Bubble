@@ -1,0 +1,592 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/make/wavebubble/wavebubblecss-make.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<link rel="alternate" type="application/rss+xml" title="ladyada.net blog  RSS Feed" href="http://www.ladyada.net/feed/" />
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7723544-2");
+pageTracker._trackPageview();
+} catch(err) {}</script> 
+
+<!-- InstanceBeginEditable name="overlib" -->
+<script type="text/javascript" src="../../javascript/overlib.js"><!-- overLIB (c) Erik Bosrup --></script>
+<!-- InstanceEndEditable -->
+<meta http-equiv="imagetoolbar" content="no" />
+<LINK REL=stylesheet HREF="../../css/make.css" TYPE="text/css">
+<LINK REL=stylesheet HREF="../../css/skeleton.css" TYPE="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Wave Bubble A/D tuning</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+
+    <div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+  
+<!-- InstanceBeginEditable name="badge" -->
+<div class="topheader" ><img src="../../images/wavebubble/topheaderbadge.png" width="171" height="190"></div>
+<!-- InstanceEndEditable -->
+<span class="topheadertext"><!-- InstanceBeginEditable name="heading" -->Wave Bubble<!-- InstanceEndEditable --></span>
+<span class="topsubheadertext"><!-- InstanceBeginEditable name="Subheading" -->Analog/Digital tuning <!-- InstanceEndEditable --></span>
+
+<ul id="menu">
+	<li class="first"></li> 
+  
+    <li>
+      <div class="menuitemtext"><a href="index.html">Overview</a></div>
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a href="faq.html">F.A.Q.</a></div>
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a href="prep.html">Make</a></div>
+	  	  <ul>
+		<li>
+		  <div class="menuitemtext"><a href="prep.html">Preparation</a></div>
+		</li>
+		<li>
+		  <div class="menuitemtext"><a href="battery.html">Battery</a></div>
+		</li>	
+		<li>
+		  <div class="menuitemtext"><a href="powersupply.html">Power supp. </a></div>
+		</li>
+		<li>
+		  <div class="menuitemtext"><a href="tuning.html">Tuning sys</a> </div>
+		</li>
+		<li>
+		  <div class="menuitemtext"><a href="vco.html">VCOs</a></div>
+		</li>
+
+		<li><div class="menuitemtext"><a href="pll.html">PLL</a></div>
+		</li>
+				<li>
+				  <div class="menuitemtext"><a href="config.html">Config.</a></div>
+		</li>
+
+		<li>
+		  <div class="menuitemtext"><a href="gain.html">Gain stage</a>
+		</div>
+		</li>
+
+		<li>
+		  <div class="menuitemtext"><a href="finishing.html">Finishing</a>
+		</div>
+		</li>
+		</ul>
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a href="hardware.html">Design</a></div>
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a href="download.html">Download</a></div>
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a href="resources.html">Resources</a></div>
+    </li>
+  
+    <li><div class="menuitemtext"><a href="http://ladyada.net/wiki/wavebubble/start">Wiki</a><a href="http://www.ladyada.net/"></a></div>
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a href="http://forums.ladyada.net/">Forums</a></div>
+    </li>
+  
+	<li class="last"></li>
+</ul>
+
+<ul id="nav">
+
+<li><a href="http://www.ladyada.net">Home</a></li>
+
+<li><a href="http://www.ladyada.net/about.html">About<!--[if gte IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+	<li><a href="http://www.ladyada.net/about.html">ladyada.net</a></li>
+	<li><a href="http://www.ladyada.net/portfolio/2007/index.html">Portfolio</a></li>
+	<li><a href="http://www.ladyada.net/pub/research.html">Research</a></li>
+	<li><a href="http://www.ladyada.net/pub/press.html">Press</a></li>
+	<li><a href="http://www.ladyada.net/pub/pub.html">Publication &amp; Presentation</a></li>
+	<li><a href="http://www.flickr.com/photos/ladyada/">Photos</a></li>
+	<li><a href="http://www.ladyada.net/wiki">Wiki (backend)</a></li>
+	</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+
+<li><a href="http://www.ladyada.net/make/">Projects<!--[if gte IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+	<li><a href="tuning.html#nogo">Arduino &#187;<!--[if gte IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<ul>
+    	<li><a href="http://www.ladyada.net/make/logshield/">Datalogger&nbsp;Shield</a></li>
+	    <li><a href="http://www.ladyada.net/make/eshield/">Ethernet&nbsp;Shield</a></li>
+	    <li><a href="http://www.ladyada.net/make/gpsshield/">GPS&nbsp;Shield</a></li>
+	  	<li><a href="http://www.ladyada.net/make/pshield/">Proto&nbsp;Shield</a></li>
+	  	<li><a href="http://www.ladyada.net/make/mshield/">Motor&nbsp;Shield</a></li>
+	  	<li><a href="http://www.ladyada.net/make/waveshield/">Wave&nbsp;Shield</a></li>
+	  </ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	<li><a href="http://www.ladyada.net/make/bbpsup/">Adj.&nbsp;power&nbsp;supply</a></li>
+	<li><a href="http://www.ladyada.net/make/brain/">Brain&nbsp;Machine</a></li>
+	<li><a href="http://www.ladyada.net/make/boarduino/">BoArduino</a></li>
+	<li><a href="http://www.ladyada.net/make/digg/">DIGG&nbsp;Button</a></li>
+	<li><a href="http://www.ladyada.net/make/drawdio/">Drawdio</a></li>
+    <li><a href="http://www.ladyada.net/make/fuzebox/">Fuzebox</a></li>
+    <li><a href="http://www.ladyada.net/make/gamegrrl/">Game&nbsp;Grrl</a></li>
+	<li><a href="http://www.ladyada.net/make/conway/">Game&nbsp;of&nbsp;Life</a></li>
+	<li><a href="http://www.ladyada.net/make/icetube/">Ice&nbsp;Tube&nbsp;clock</a></li>
+    <li><a href="http://www.ladyada.net/make/midisense/">MIDIsense</a></li>
+	<li><a href="http://www.ladyada.net/make/minipov2/">MiniPOV2</a></li>
+	<li><a href="http://www.ladyada.net/make/minipov3/">MiniPOV3</a></li>
+	<li><a href="http://www.ladyada.net/make/minty/">MintyMP3</a></li>
+	<li><a href="http://www.ladyada.net/make/mintyboost/">MintyBoost</a></li>
+    <li><a href="http://www.ladyada.net/make/monochron/">MONOCHRON</a></li>
+    <li><a href="http://www.ladyada.net/make/simreader/">SIM&nbsp;Reader</a></li>
+	<li><a href="http://www.ladyada.net/make/spokepov/">SpokePOV</a></li>
+	<li><a href="http://www.ladyada.net/make/tvbgone/">TV-B-Gone</a></li>
+	<li><a href="http://www.ladyada.net/make/tweetawatt/">Tweet-a-Watt</a></li>
+    <li><a href="http://www.ladyada.net/make/usbtinyisp/">USBtinyISP</a></li>
+	<li><a href="index.html">Wave&nbsp;Bubble</a></li>
+	<li><a href="http://www.ladyada.net/make/x0xb0x/">x0xb0x</a></li>
+	<li><a href="http://www.ladyada.net/make/xbee/">XBee</a></li>
+	<li><a href="http://www.ladyada.net/make/ybox2/">YBox2</a></li>
+	<li><a href="tuning.html#nogo">Quickies &#187;<!--[if gte IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<ul>
+    <li><a href="http://www.ladyada.net/make/usbgamepad/index.html">USB&nbsp;Gamepad</a></li>
+	    <li><a href="http://www.ladyada.net/make/pumpkin/pumpkin.html">Halloween&nbsp;Pumpkin</a></li>
+	    <li><a href="http://www.ladyada.net/make/vintagelight/index.html">Vintage&nbsp;Bike&nbsp;Lite</a></li>
+	  	<li><a href="http://www.ladyada.net/make/sudc4kap/index.html">Kite&nbsp;Arial&nbsp;Photo</a></li>
+	  	<li><a href="http://www.ladyada.net/make/bikestand/index.html">Bike&nbsp;Stand</a></li>
+	  	<li><a href="http://www.ladyada.net/make/bikelite/index.html">LiIon&nbsp;Bike&nbsp;Lite</a></li>
+     	<li><a href="http://www.ladyada.net/make/pogojig/index.html">Pogo&nbsp;Jib</a></li>
+	  	<li><a href="http://www.ladyada.net/make/massprog/index.html">Mass&nbsp;Programming</a></li>
+	  	<li><a href="http://www.ladyada.net/make/solarlipo/index.html">Solar&nbsp;LiPo&nbsp;Charging</a></li>
+	  	<li><a href="http://www.ladyada.net/make/magstripe/index.html">Magstripe&nbsp;Reader</a></li>
+	  	<li><a href="http://www.ladyada.net/make/solarlogger/index.html">Solar&nbsp;Tracker</a></li>
+        <li><a href="http://www.ladyada.net/make/tronbag/">TRON&nbsp;Bag</a></li>
+	  </ul><!--[if lte IE 6]></td></tr></table></a><![endif]-->
+      </li>
+   	<li><a href="http://www.ladyada.net/make/">More...</a></li>
+	<li><a href="http://www.instructables.com/member/ladyada/">->Instructables</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+
+<li><a href="http://www.ladyada.net/learn/">Learn<!--[if gte IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+	<li><a href="http://www.ladyada.net/learn/arduino/">Arduino&nbsp;tutorial</a></li>
+	<li><a href="http://www.ladyada.net/learn/avr/">AVR&nbsp;tutorial</a></li>
+	<li><a href="http://www.ladyada.net/learn/barcodescan/">Barcode&nbsp;scanners</a></li>
+	<li><a href="http://www.ladyada.net/learn/el-wire/">EL&nbsp;Wire&nbsp;tutorial</a></li>
+	<li><a href="http://www.ladyada.net/learn/lcd/">LCDs</a></li>
+	<li><a href="http://www.ladyada.net/learn/arduino/LEDs.html">LEDs</a></li>
+	<li><a href="http://www.ladyada.net/learn/multimeter/">Multimeter&nbsp;tutorial</a></li>
+   	<li><a href="http://www.ladyada.net/learn/scale/">Digital&nbsp;scales</a></li>
+    <li><a href="http://www.ladyada.net/learn/sensors/">Sensors &#187;<!--[if gte IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<ul>
+    	<li><a href="http://www.ladyada.net/learn/sensors/fsr.html">FSR</a></li>
+	    <li><a href="http://www.ladyada.net/learn/sensors/cds.html">CdS&nbsp;Photocell</a></li>
+	    <li><a href="http://www.ladyada.net/learn/sensors/tmp36.html">Temperature</a></li>
+	  	<li><a href="http://www.ladyada.net/learn/sensors/tilt.html">Tilt</a></li>
+	  	<li><a href="http://www.ladyada.net/learn/sensors/pir.html">PIR</a></li>
+        <li><a href="http://www.ladyada.net/learn/sensors/thermocouple.html">Thermocouple</a></li>
+        <li><a href="http://www.ladyada.net/learn/sensors/ir.html">IR&nbsp;Receiver</a></li>
+	  </ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    </li>
+        <li><a href="http://www.ladyada.net/learn/breakoutplus/">Breakout boards &#187;<!--[if gte IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<ul>
+    	<li><a href="http://www.ladyada.net/learn/breakoutplus/ds1307rtc.html">DS1307&nbsp;RTC</a></li>
+        <li><a href="http://www.ladyada.net/learn/sensors/thermocouple.html">MAX6675</a></li>
+        <li><a href="http://www.ladyada.net/learn/products/atmega32u4breakout/">ATmega32u4&nbsp;Breakout+</a></li>
+	  </ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    </li>
+  
+          <li><a href="http://www.ladyada.net/products/">Products &#187;<!--[if gte IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<ul>
+     <li><a href="http://www.ladyada.net/learn/products/i2cspilcdbackpack/">i2c/SPI&nbsp;LCD&nbsp;backpack</a></li>
+     <li><a href="http://www.ladyada.net/learn/products/usbboarduino/">USB&nbsp;Boarduino</a></li>
+     <li><a href="http://www.ladyada.net/learn/products/atmega32u4breakout/">ATmega32u4&nbsp;Breakout+</a></li>
+     <li><a href="http://www.ladyada.net/learn/products/tfttouchbreakout/">2.8&nbsp;TFT&nbsp;touchscreen</a></li>
+     <li><a href="http://www.ladyada.net/learn/products/18tftbreakout/">1.8&nbsp;SPI&nbsp;TFT&nbsp;</a></li>
+     <li><a href="http://www.ladyada.net/learn/products/rfidnfc/">RFID/NFC</a></li>
+     	  </ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    </li>
+      
+	<li><a href="http://www.ladyada.net/learn/chumby/">Chumby&nbsp;Hacker&nbsp;Board</a></li>
+	<li><a href="http://www.ladyada.net/learn/soldering/">Soldering&nbsp;tutorial</a></li>
+	<li><a href="http://www.ladyada.net/learn/powersupply/">Power&nbsp;Supply&nbsp;tutorial</a></li>
+    <li><a href="http://www.ladyada.net/learn/electroknit/">Brother&nbsp;KH-9033&nbsp;tutorial</a></li>
+	<li><a href="http://www.ladyada.net/learn/diykinect/">USB&nbsp;reverse-engineering&nbsp;tutorial</a></li>
+    <li><a href="http://www.ladyada.net/learn/calipers/">Calipers&nbsp;tutorial</a></li>
+    <li><a href="http://www.ladyada.net/products/rgbledstrip/">RGB&nbsp;LED&nbsp;Strips</a></li>
+    <li><a href="http://www.ladyada.net/products/rgbledpixels/">RGB&nbsp;LED&nbsp;Pixels</a></li>
+    <li><a href="http://www.ladyada.net/learn/lipoly/">LiIon&nbsp;&amp;&nbsp;LiPoly&nbsp;Batteries</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+
+	
+<li><a href="http://www.ladyada.net/library/">Library<!--[if gte IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>	
+	<li><a href="http://www.ladyada.net/library/arduino/">Arduino&nbsp;Hacks</a></li>
+    <li><a href="http://www.ladyada.net/library/batteries.html">Batteries</a></li>
+	<li><a href="http://www.ladyada.net/library/diyboostcalc.html">Boost&nbsp;Calc</a></li>
+    <li><a href="http://www.ladyada.net/library/equipt/">E.E.&nbsp;Tools</a></li>
+	<li><a href="http://www.ladyada.net/library/hackcomputer.html">E.E.&nbsp;Computer</a></li>
+    <li><a href="http://www.ladyada.net/library/procure/">Find&nbsp;Parts</a></li>
+	<li><a href="http://www.ladyada.net/library/kits/">Kits</a></li>
+	<li><a href="http://www.ladyada.net/library/laser/">Laser</a></li>
+    <li><a href="http://www.ladyada.net/library/ucannoyances.html">uC Annoyances</a></li>
+	<li><a href="http://www.ladyada.net/library/openhardware/">Open Source Hardware</a></li>
+	<li><a href="http://www.ladyada.net/library/pcb/">PCB&nbsp;Design&nbsp;&amp;&nbsp;Tips</a></li>
+	<li><a href="http://www.ladyada.net/library/picvsavr.html">PIC&nbsp;vs.&nbsp;AVR</a></li>
+	<li><a href="http://www.ladyada.net/library/software/index.html">Software</a></li>
+	<li><a href="http://www.ladyada.net/library/smt/index.html">SMT</a></li>
+    <li><a href="http://www.ladyada.net/library/zencart/">Zen-Cart&nbsp;Mods</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+
+<li><a href="http://www.adafruit.com/blog/">Blog</a></li>
+
+<li><a href="http://www.adafruit.com" target="_blank">Store</a></li>
+
+<li><a href="http://forums.adafruit.com/" target="_blank">Forums</a></li>
+
+</ul>
+
+<div id="searchbox">
+<!-- Google CSE Search Box Begins -->
+<form id="searchbox_012941403977924873237:omv8mprm6ek" action="http://www.google.com/cse" target="_top"> <input type="hidden" name="cx" value="012941403977924873237:omv8mprm6ek" /> <input name="q" type="text" size="23" /><br /> <span class="style1">ladyada.net</span> <input type="submit" name="sa" value="Search" /> <input type="hidden" name="cof" value="FORID:0" /> </form><script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_012941403977924873237%3Aomv8mprm6ek"></script>
+<!-- Google CSE Search Box Ends -->
+</div>
+
+<div id="lefttcol">
+<!-- this is just a buffer -->
+</div>
+
+<div id="content">
+  <!-- InstanceBeginRepeat name="texts" --><!-- InstanceBeginRepeatEntry -->
+  <div class="textblockheader"> <!-- InstanceBeginEditable name="Header" -->Analog/Digital tuning <!-- InstanceEndEditable --> </div>
+  <div class="textblock"> <!-- InstanceBeginEditable name="text" -->
+    <p>This subcircuit does the work of tuning and generating the waveform for the VCOs. The main control is an atmega88. The micro has a bunch of tasks:</p>
+    <ol>
+      <li>Generate the DC offset for the jammers with the PWM subsystem on chip</li>
+      <li>Tune the bandwidth to be jammed by configuring the digital potentiometers</li>
+      <li>Switching between high/low frequency generation</li>
+      <li>Talking to the PLL and verifying the frequencies being jammed </li>
+    </ol>
+    <p>The 555 and related subcircuit is used to generate the sawtooth wave that sweeps between the desired bandwidth. The frequency-setting resistor is tied to a microcontroller pin; when the pin is pulled high, a 20Khz wave is generated. When the pin is set as a pull-up input, a 100Hz wave is generated so that the micro's A/D has enough time to read the PLL output. </p>
+    <ul>
+      <li>LM358's are essential as they are near rail-to-rail op amps that can go up to 30V.</li>
+      <li>You can use 10K or 1K digital pots, the 1K will just use more power.</li>
+      <li>The Atmega88 can be replace by a '168: they are pin compatible. Atmega8Ls are also OK but might require some code tweaking YMMV. </li>
+      <li>To set the final gain stage. First decide how much voltage you'll need to sweep the desired bandwidth. Say 5Vpp. The output from the 555 is 1Vpp therefore the gain should be at least 5x. However, also make sure that you can't go over Vtune. Since the PWM output is 0-3.3V, take the max Vtune and divide by 3.3. Say it's 20V, then the gain should be 6x. If the ac gain desired is larger than the max dc gain, use R11/R13 to reduce the dc max output. </li>
+    </ul>
+  <!-- InstanceEndEditable --> </div>
+  <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+  <div class="textblockheader"> <!-- InstanceBeginEditable name="Header" -->Parts<!-- InstanceEndEditable --> </div>
+  <div class="textblock"> <!-- InstanceBeginEditable name="text" -->
+    <table width="100%" border="2" cellpadding="5" cellspacing="0" bgcolor="#CCCCCC">
+      <tr>
+        <th width="30%" scope="col">Part # &amp; Datasheets </th>
+        <th width="10%" scope="col"><div align="center">Name</div></th>
+        <th width="22%" scope="col">Description</th>
+        <th width="15%" scope="col"><div align="center">Distributor</div></th>
+        <th width="7%" scope="col"><div align="center">Qty</div></th>
+        <th width="8%" scope="col"><div align="right">Cost</div></th>
+        <th width="8%" scope="col"><div align="right">Total</div></th>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF"><div align="left"><a href="http://www.atmel.com/dyn/resources/prod_documents/doc2545.pdf">*ATmega88-20AU</a></div></td>
+        <td><div align="center">IC5</div></td>
+        <td>8-bit microcontroller, an atmega48 is fine if take out the self-tuning stuff or dont want a bootloader. Atmega8 is probably OK too. </td>
+        <td><p align="center"><a href="http://www.digikey.com/scripts/DkSearch/dksus.dll?PName?Name=ATMEGA88-20AU-ND&Site=US">Digikey</a><br>
+                <a href="http://www.atmel.com/forms/Samples.asp?family_id=607">Sample</a><br>
+        </p></td>
+        <td><div align="center">1</div></td>
+        <td><div align="right">$3.76</div></td>
+        <td><div align="right">$3.76</div></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF"><a href="http://www.analog.com/UploadedFiles/Data_Sheets/309098774AD8400_2_3_d.pdf">*AD8402ARZ10</a></td>
+        <td><div align="center">IC6</div></td>
+        <td>Dual digital 10K potentiomenter </td>
+        <td><div align="center"><a href="http://www.digikey.com/scripts/DkSearch/dksus.dll?PName?Name=AD8403ARZ10-ND%26Site=US">Digikey</a><br>
+                <a href="http://www.analog.com/en/prod/0%2C2877%2CAD8403%2C00.html">Sample</a></div></td>
+        <td><div align="center">1</div></td>
+        <td><div align="right">$3.78</div></td>
+        <td><div align="right">$3.78</div></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF"><a href="http://www.national.com/ds/LM/LMC555.pdf">*LMC555</a> (or any CMOS 555 equiv)</td>
+        <td><div align="center">IC7</div></td>
+        <td>CMOS 555 </td>
+        <td><p align="center"><a href="http://www.digikey.com/scripts/DkSearch/dksus.dll?PName?Name=497-2298-1-ND%26Site=US">Digikey</a><br>
+        Mouser<br>
+        <a href="https://www-a.ti.com/apps/samp/xt_orderform_additem.asp?sku=TLC555CDR">Sample </a><br>
+        </p></td>
+        <td><div align="center">1</div></td>
+        <td><div align="right">$0.65</div></td>
+        <td><div align="right">$0.65</div></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">*<a href="http://focus.ti.com/general/docs/lit/getliterature.tsp?genericPartNumber=LM358">LM358D</a></td>
+        <td><div align="center">IC8, IC9 </div></td>
+        <td>Dual rail/rail high voltage op-amp </td>
+        <td><div align="center"><a href="http://www.digikey.com/scripts/DkSearch/dksus.dll?PName?Name=296-1014-5-ND&Site=US">Digikey</a><br>
+                <a href="https://www-a.ti.com/apps/samp/xt_orderform_additem.asp?sku=LM358ADRG4">Mouser<br>
+        Sample </a></div></td>
+        <td><div align="center">1</div></td>
+        <td><div align="right">$0.22</div></td>
+        <td><div align="right">$0.22</div></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF"><span id="lblManufacturerPartNum"><a href="http://www.fairchildsemi.com/ds/MM/MMBT3906.pdf">MMBT3906</a></span></td>
+        <td><div align="center">Q1</div></td>
+        <td>PNP SOT-23 transistor </td>
+        <td><div align="center"><a href="http://www.digikey.com/scripts/DkSearch/dksus.dll?PName?Name=568-1742-1-ND&Site=US">Digikey</a><br>
+                <a href="http://www.mouser.com/search/ProductDetail.aspx?R=MMBT3906Kvirtualkey51210000virtualkey512-MMBT3906K">Mouser</a></div></td>
+        <td><div align="center">1</div></td>
+        <td><div align="right">$0.05</div></td>
+        <td><div align="right">$0.05</div></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">&nbsp;</td>
+        <td><div align="center">JP2</div></td>
+        <td>2x3 male reprogramming header </td>
+        <td><div align="center">Digikey<br>
+        Mouser</div></td>
+        <td><div align="center">1</div></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">&nbsp;</td>
+        <td><div align="center">JP1</div></td>
+        <td><p>F/M matching header for serial comm </p>
+        </td>
+        <td><div align="center">Digikey<br>
+        Mouser</div></td>
+        <td><div align="center">1</div></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF"><div align="left"><a href="http://rocky.digikey.com/WebLib/Lite-on/Web%20Data/LTST-S320GKT.pdf">LTST-S320GKT</a></div></td>
+        <td><div align="center">LED2</div></td>
+        <td>LED (1206) any really, but the recommended one is right-angle mount </td>
+        <td><div align="center"><a href="http://www.digikey.com/scripts/DkSearch/dksus.dll?PName?Name=160-1206-1-ND&Site=US">Digikey</a></div></td>
+        <td><div align="center">1</div></td>
+        <td><div align="right">$0.16</div></td>
+        <td><div align="right">$0.16</div></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">0.1uF ceramic 1206 capacitor </td>
+        <td><div align="center">C21, C24, C25, C31, C32, C35 </div></td>
+        <td>0.1uF Bypass cap </td>
+        <td><div align="center"><a href="http://www.mouser.com/search/ProductDetail.aspx?R=C1206C104K5RAC7800virtualkey64600000virtualkey80-C1206C104K5R">Mouser</a></div></td>
+        <td><div align="center">4</div></td>
+        <td><div align="right">$0.08</div></td>
+        <td><div align="right">$0.32</div></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF"><span id="lblManufacturerPartNum"><a href="http://www.kemet.com/datasheets&C1206C475Z4VAC7800">C1206C475Z4VAC7800</a></span></td>
+        <td><div align="center">C22, C23, C33, C34 </div></td>
+        <td>4.7uF 1206 ceramic capacitor </td>
+        <td><div align="center"><a href="http://www.mouser.com/search/ProductDetail.aspx?R=C1206C475Z4VAC7800virtualkey64600000virtualkey80-C1206C475Z4V">Digikey<br>
+        Mouser </a></div></td>
+        <td><div align="center">4</div></td>
+        <td><div align="right">$0.30</div></td>
+        <td><div align="right">$1.20</div></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">68ohm 5% 1206 resistor</td>
+        <td><div align="center">R12</div></td>
+        <td>Current source set resistor, reduce for higher freq.</td>
+        <td><div align="center"><a href="http://www.digikey.com/scripts/DkSearch/dksus.dll?PName?Name=311-68ERCT-ND&Site=US">Digikey</a></div></td>
+        <td><div align="center">1</div></td>
+        <td><div align="right">$0.08</div></td>
+        <td><div align="right">$0.08</div></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">1K 5% 1206 resistor </td>
+        <td><div align="center">L5, L6 </div></td>
+        <td>Use inductors to reduce PWM noise</td>
+        <td><div align="center"><a href="http://www.digikey.com/scripts/DkSearch/dksus.dll?PName?Name=311-1.0KERCT-ND%26Site=US">Digikey</a></div></td>
+        <td><div align="center">2</div></td>
+        <td><div align="right">$0.08</div></td>
+        <td><div align="right">$0.16</div></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">10K 5% 1206 resistor</td>
+        <td><div align="center">R10, R14, R16, R17, R18</div></td>
+        <td>various 10K's </td>
+        <td><div align="center"><a href="http://www.digikey.com/scripts/DkSearch/dksus.dll?PName?Name=311-10KERCT-ND&Site=US">Digikey</a></div></td>
+        <td><div align="center">5</div></td>
+        <td><div align="right">$0.08</div></td>
+        <td><div align="right">$0.40</div></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">20K 5% 1206 resistor </td>
+        <td><div align="center">R11</div></td>
+        <td>Sets bias for current source </td>
+        <td><div align="center"><a href="http://www.digikey.com/scripts/DkSearch/dksus.dll?PName?Name=311-20KERCT-ND&Site=US">Digikey</a></div></td>
+        <td><div align="center">1</div></td>
+        <td><div align="right">$0.08</div></td>
+        <td><div align="right">$0.08</div></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">39K 5% 1206 resistor</td>
+        <td><div align="center">R13</div></td>
+        <td>Sets gain for VCO1 adjust as necessary </td>
+        <td><div align="center">Digikey</div></td>
+        <td><div align="center">1</div></td>
+        <td><div align="right">$0.08</div></td>
+        <td><div align="right">$0.08</div></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">47K 5% 1206 resistor</td>
+        <td><div align="center">R15</div></td>
+        <td>Sets gain for VCO2 adjust as necessary </td>
+        <td><div align="center">Digikey</div></td>
+        <td><div align="center">1</div></td>
+        <td><div align="right">$0.08</div></td>
+        <td><div align="right">$0.08</div></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF"><p>1206 resistor</p>
+        </td>
+        <td><div align="center">R8</div></td>
+        <td>placement optional: to set max gain for VCO1</td>
+        <td><div align="center">Digikey</div></td>
+        <td><div align="center">1</div></td>
+        <td><div align="right">$0.08</div></td>
+        <td><div align="right">$0.08</div></td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">1206 resistor</td>
+        <td><div align="center">R9</div></td>
+        <td>placement optional: to set max gain for VCO2</td>
+        <td><div align="center">Digikey</div></td>
+        <td><div align="center">1</div></td>
+        <td><div align="right">$0.08</div></td>
+        <td><div align="right">$0.08</div></td>
+      </tr>
+      <tr bgcolor="#CCCCCC">
+        <td><strong>Total</strong></td>
+        <td><div align="center"></div></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td><strong>$3-$10</strong></td>
+      </tr>
+    </table>
+  <!-- InstanceEndEditable --> </div>
+  <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+  <div class="textblockheader"> <!-- InstanceBeginEditable name="Header" -->Assembly<!-- InstanceEndEditable --> </div>
+  <div class="textblock"> <!-- InstanceBeginEditable name="text" -->
+    <table width="0%" class="assembly">
+      <tr>
+        <td class="imagetd"><a href="http://www.flickr.com/photos/ladyada/332195634"><img src="http://static.flickr.com/151/332195634_9f873e2391.jpg" width=500 height=375></a> </td>
+        <td valign="top"><p>Get parts for soldering in the microcontroller, led, and programming header </p>
+        </td>
+      </tr>
+      <tr>
+        <td class="imagetd"><a href="http://www.flickr.com/photos/ladyada/332195785"><img src="http://static.flickr.com/94/332195785_7a01d748a6.jpg" width=489 height=500></a></td>
+        <td valign="top">Solder in the header and led/resistor on one side.</td>
+      </tr>
+      <tr>
+        <td class="imagetd"><a href="http://www.flickr.com/photos/ladyada/332195707"><img src="http://static.flickr.com/127/332195707_e097de6824.jpg" width=457 height=500></a></td>
+        <td valign="top">Solder in the microcontroller on the opposite side </td>
+      </tr>
+      <tr>
+        <td class="imagetd"><a href="http://www.flickr.com/photos/ladyada/332195897"><img src="http://static.flickr.com/133/332195897_eefa190349.jpg" width=500 height=375></a></td>
+        <td valign="top">Attach your favorite AVR programmer to the 6 pin header </td>
+      </tr>
+      <tr>
+        <td class="imagetd"><a href="http://www.flickr.com/photos/ladyada/332287395/in/photostream/"><img src="../../images/wavebubble/burnfuse.png" width="669" height="446" border="0" /></a></td>
+        <td valign="top">Burn the fuses, then compile the code with the LED test uncommented. </td>
+      </tr>
+      <tr>
+        <td class="imagetd"><p><a href="http://www.flickr.com/photos/ladyada/332195501"><img src="http://static.flickr.com/150/332195501_c0766f3563.jpg" width=500 height=375></a></p>
+        <p><embed style="width:400px; height:326px;" id="VideoPlayback" align="middle" type="application/x-shockwave-flash" src="http://video.google.com/googleplayer.swf?docId=-5158309780492178848&hl=en" quality="best" bgcolor="#ffffff" scale="noScale" salign="TL"  FlashVars="playerMode=embedded"> </embed>&nbsp;</p></td>
+        <td valign="top"><p>The green led should blink once per second to indicate the fuses are correct and programming was successful. </p>
+        </td>
+      </tr>
+      <tr>
+        <td class="imagetd"><p><a href="http://www.flickr.com/photos/ladyada/332221794"><img src="http://static.flickr.com/149/332221794_70cff4c6e1.jpg" width=500 height=375></a></p>
+        <p><a href="http://www.flickr.com/photos/ladyada/332221174"><img src="http://static.flickr.com/150/332221174_6770a3453a.jpg" width=500 height=375></a></p>
+        <embed style="width:400px; height:326px;" id="VideoPlayback" type="application/x-shockwave-flash" src="http://video.google.com/googleplayer.swf?docId=26470338138390746&hl=en" flashvars=""> </embed></td>
+        <td valign="top"><p>Next, test the PWM output. Comment out the LED test and uncomment the PWM test. </p>
+        <p>Probe the PWM outputs (L5 and L6 input). You should get a sweeping 16KHz squarewave. </p></td>
+      </tr>
+      <tr>
+        <td class="imagetd">
+          <p><a href="http://www.flickr.com/photos/ladyada/332221898"><img src="http://static.flickr.com/165/332221898_3b9db42d83.jpg" width=500 height=375></a></p>
+          <p>
+            <a href="http://www.flickr.com/photos/ladyada/332221990"><img src="http://static.flickr.com/158/332221990_04e6d24d94.jpg" width=500 height=375></a>
+                  </p>
+				  <embed style="width:400px; height:326px;" id="VideoPlayback" type="application/x-shockwave-flash" src="http://video.google.com/googleplayer.swf?docId=8602733099118406294&hl=en" flashvars=""> </embed></td>
+        <td valign="top">Solder in the RC filter (L5/L6 &amp; C22/C23) Then probe at their junction to see a slowly increasing/decreasing DC offset </td>
+      </tr>
+      <tr>
+        <td class="imagetd"><a href="http://www.flickr.com/photos/ladyada/332221532"><img src="http://static.flickr.com/142/332221532_40aae1fcae.jpg" width=500 height=375></a></td>
+        <td valign="top">Solder in the 555 sawtooth generator and buffer opamp. </td>
+      </tr>
+      <tr>
+        <td class="imagetd">
+          <p><a href="http://www.flickr.com/photos/ladyada/332221403"><img src="http://static.flickr.com/138/332221403_cf6b78c4ca.jpg" width=500 height=375></a></p>
+          <p><a href="http://www.flickr.com/photos/ladyada/332222136"><img src="http://static.flickr.com/157/332222136_788ac9bdc8.jpg" width=500 height=375></a>
+                    </p>
+<embed style="width:400px; height:326px;" id="VideoPlayback" align="middle" type="application/x-shockwave-flash" src="http://video.google.com/googleplayer.swf?docId=5281020236625911322&hl=en" quality="best" bgcolor="#ffffff" scale="noScale" salign="TL"  FlashVars="playerMode=embedded"> </embed>
+</td>
+        <td valign="top">Reprogram the chip with the sawtooth frequency test. Probe the output of the buffer and notice it switching between 100Hz and 20KHz. A good multimeter with frequency counting can also do this. </td>
+      </tr>
+      <tr>
+        <td class="imagetd"><a href="http://www.flickr.com/photos/ladyada/332221056"><img src="http://static.flickr.com/149/332221056_7586fa34eb.jpg" width=500 height=375></a></td>
+        <td valign="top">Solder in the remainder of the wave generator.</td>
+      </tr>
+      <tr>
+        <td class="imagetd"><p><a href="http://www.flickr.com/photos/ladyada/332221636"><img src="http://static.flickr.com/151/332221636_2dbf009165.jpg" width=500 height=375></a></p>
+				<embed style="width:400px; height:326px;" id="VideoPlayback" type="application/x-shockwave-flash" src="http://video.google.com/googleplayer.swf?docId=3757411904266873527&hl=en" flashvars=""> </embed></td>
+        <td valign="top">Test the adjustable resistors (digital pots) by programming in the potentiometer test and then probing the wipers of the digipots. You should see a varying amplitude sawtooth. </td>
+      </tr>
+    </table>
+  <!-- InstanceEndEditable --> </div>
+  <!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat --></div>
+
+<div id="rightcol">
+<!-- this is just a buffer -->
+</div>
+
+
+
+<div id="history">
+<!-- #BeginDate format:Am1m -->May 17, 2011  20:07<!-- #EndDate --></div>
+
+</body>
+<!-- InstanceEnd --></html>

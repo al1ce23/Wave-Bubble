@@ -1,0 +1,452 @@
+body { 	background: #ffffff url("background-line.png"); 
+		background-repeat: repeat-y; 
+		background-position: left top; 
+		margin: 0px 0px 0px 100px; 
+		background-color: #FFFFFF; 
+		font-family:verdana; 
+		font-size: 10px; 
+		color: #FFFFFF; 
+width: 97%;
+}
+
+#rightcol {
+	position: absolute;
+	left: 80%;
+	top: 85px;
+	width: 140px;
+	padding-left: 10px;
+	z-index: 3;
+	color: #000;
+	padding: 3px;
+}
+#leftcol {
+	float: left;
+	width: 100px;
+	margin-left: 10px;
+	margin-top: 0px;
+	color: #000;
+	padding: 3px;
+	}
+
+#history {
+	font-family: Times, serif;
+	font-size:10px;
+	font-style:italic;
+	color:#666666;
+	position: absolute;
+	left: 720px;
+	top: 109px;
+	
+}
+
+.foliotitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.foliodate {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: italic;
+	color: #666666;
+}
+
+.foliodescription {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+}
+
+.folioimage {
+	
+}
+
+.textblockheader {
+	font-family: Times, serif;
+	font-size: 18px;
+	font-weight:bold;
+	color: #000000;
+}
+
+.wikiinclude table, .wikiinclude td {
+	padding: 10px;
+}
+
+.wikiinclude h1, .wikiinclude h2, .wikiinclude h3, div.tocheader {
+	font-family: Times, serif;
+	font-size: 18px;
+	font-weight:bold;
+	color: #000000;
+		position: relative;
+	left: -41px;
+	text-align: left;
+	top: 0px;
+}
+
+.wikiinclude h1 {
+ 	font-size: 24px;
+}
+
+.textblock, .wikiinclude {
+	font-family: Times, serif;
+	font-size: 14px;
+	color: #000000;
+	position: relative;
+	left: 42px;
+	text-align: left;
+	top: 0px;
+	z-index: 0;
+}
+
+.textblock a:link, .wikiinclude a:link {
+	color: #0066CC;
+	font-style: normal;
+}
+
+.textblock a:visited, .wikiinclude a:visited {
+}
+
+.textblock a:active, .wikiinclude a:active{
+}
+
+.textblock a:hover, .wikiinclude a:hover{
+	color: #006666;
+}
+
+.textblock table {
+}
+
+table.partslist {
+	position: relative;
+	left: -30px;
+	background-color: #FFFFFF;
+	border: 1px solid;
+}
+	
+table.partslist td {
+    background: #ffffff;
+    padding: 10px;
+    border: 1px #000000 solid;
+}
+table.partslist td.imagetd {
+	text-align: center;
+}
+
+table.BOM {
+	position: relative;
+	left: -30px;
+	background-color: #FFFFFF;
+	border: 1px solid;
+}
+
+table.BOM td {
+    background: #ffffff;
+    border: 1px #000000 solid;
+	padding: 10px;
+}
+
+table.BOM td.imagetd {
+	background-color:#FFFFFF;
+	text-align: center;
+	padding: 5px;
+	 display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+table.photo_note_text_table { 
+	border-spacing: 0px;
+	margin:0px; 
+	padding:1px;
+	background-color:#000;
+	border: 1px solid black;
+}
+
+.photo_note_text_table td {
+    padding: 3px;
+    background: #000;
+}
+
+ 
+table.assembly {
+	position: relative;
+	left: -40px;
+	background-color: #DDDDDD;
+	border: 1px;
+	border-spacing: 3px;
+	padding: 10px;
+	border-style: solid;
+	width: 120%;
+}
+
+table.assembly td {
+    background: #ffffff;
+    padding: 7px;
+    border: 1px #000000 solid;
+}
+
+table.assembly td.imagetd { 
+	padding: 5px;
+	display: block;
+    margin-left: auto;
+	margin-right: auto
+}
+
+
+table.assembly td.imagetd a {
+	border:1px;
+}
+	  
+table.resistor {
+	position:relative;
+	left: auto;
+	right: auto;
+	text-align: center;
+	border-spacing: 0px;
+	padding: 0px;
+	border: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
+	width: 10;
+}
+table.resistor td { 
+	border-collapse: collapse;
+	border-spacing: 0px;
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+}
+	
+.topheader {
+	background:url(headerline.png);
+	background-repeat: repeat-x;
+	background-position: left top;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0px 0px 0px 0px;
+	width: 100%;
+}
+.topheader img {
+}
+.topheader img.badge {
+	position: absolute;
+	top: 134px;
+	left: 126px;
+	margin: 0px 0px 0px 0px;
+	width: 100px;
+	height: 100px;
+}
+.topheadertext {
+	font-family: Futura, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 48px;
+	color: #000000;
+	position: absolute;
+	left: 240px;
+	bottom: 50px;
+	top: 71px;
+	height: 70px;
+}
+.topsubheadertext {
+	font-family: Futura, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #000000;
+	position: absolute;
+	left: 270px;
+	bottom: 50px;
+	height: 70px;
+	top: 131px;
+}
+
+#content {
+	color: #000000;
+	margin: 200px 20% 100px 200px;
+	padding: 3px;
+}
+
+
+/* stuff for the left hand menu */
+
+.menuitemtext {
+	position: relative;
+	left: 12px;
+	height: 30px;
+}
+
+.smenuitemtext, .smenuitemtext2 {
+	position: relative;
+	left: 12px;
+	height: 1.7em;
+	font-size: 16px;
+}
+
+.smenuitemtext2 {
+	height: 2.7em;
+}
+
+#menu {
+	width: 118px;
+	position: absolute;
+	left: 25px;
+	top: 250px;
+	border: 0px;
+}
+
+#menu, #menu ul {
+	color: #000000;
+	list-style: none;
+	list-style-position: outside;
+	margin: 0px;
+	padding: 0px;
+
+}
+
+#menu li {
+	background-color: #FFFFFF;
+	font-family: Futura, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #666666;
+	background: url(menubg.png);
+	background-repeat: repeat-y;
+	height: auto;
+	display: list;
+}
+
+#menu li ul {
+ height: inherit;
+}
+
+#menu li li {
+	background-color: none;
+	font-family: Futura, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #666666;
+	height: 20px;
+	background: none;
+	
+}
+#menu li li div.menuitemtext {
+	position: relative;
+	left: 20px;
+	top: -5px;
+}
+
+#menu li.first {
+	background: url(menuhead.png);
+	background-repeat: repeat-x;
+	height: 32px;
+}
+
+#menu li.last {
+	background: url(menufoot.png);
+	background-repeat: repeat-x;
+	height: 32px;
+}
+
+
+
+#menu a:link {
+	font-style: normal;
+	color: #000000;
+	text-decoration: none;
+	border-bottom: thin solid #0066CC;
+}
+#menu a:visited {
+	text-decoration: none;
+	color: #000000;
+	border-bottom: thin solid #0066CC;
+}
+
+#menu a:active {
+	text-decoration: none;
+	border-bottom: thin solid #0066CC;
+
+}
+
+#menu a:hover {
+	color: #000000;
+	border-bottom: thick solid #0066CC;
+}
+
+
+
+.openlablogo {
+	position: absolute;
+	left: 720px;
+	top: 70px;
+}
+
+#searchbox {
+	position: absolute;
+	right: 20px;
+	top: 5px;
+}
+
+
+.codefragment {
+       font-family: Fixed, monospace;
+       font-size: 95%;
+}
+PRE.codefragment {
+	border: 1px solid #CCCCCC;
+	background-color: #f5f5f5;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	margin-left: 2px;
+	margin-right: 8px;
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+SPAN.comment { color: #800000 }
+SPAN.functionname {color: #993300;  font-weight: bold }
+SPAN.const {color: #CC0000}
+SPAN.keyword { color: #CC9900 }
+SPAN.call { color: #996600}
+
+.calloutwarn {
+	border: 1px dashed #000000;
+	background-color: #FFEEEE;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	margin-left: 2px;
+	margin-right: 8px;
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.calloutnote {
+	border: 1px dashed #000000;
+	background-color: #EEFFFF;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	margin-left: 2px;
+	margin-right: 8px;
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+
+ table.inline {
+border: 0px solid black;
+border-spacing: 0px;
+ }
+ 
+.inline td {
+border: 1px solid black;
+padding: 5x;
+ }
+ 
+ .inline th {
+border: 1px solid black;
+padding: 5px;
+background-color:#CCCCCC;
+ }

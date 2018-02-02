@@ -1,0 +1,335 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/make/wavebubble/wavebubblecss.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<link rel="alternate" type="application/rss+xml" title="ladyada.net blog  RSS Feed" href="http://www.ladyada.net/feed/" />
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7723544-2");
+pageTracker._trackPageview();
+} catch(err) {}</script> 
+
+<!-- InstanceBeginEditable name="overlib" -->
+<script type="text/javascript" src="../../javascript/overlib.js"><!-- overLIB (c) Erik Bosrup --></script>
+<!-- InstanceEndEditable -->
+<meta http-equiv="imagetoolbar" content="no" />
+<LINK REL=stylesheet HREF="../../css/make.css" TYPE="text/css">
+<LINK REL=stylesheet HREF="../../css/skeleton.css" TYPE="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="doctitle" -->
+    <title>Wave Bubble hardware design</title><!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" -->
+    <!-- InstanceEndEditable -->
+</head>
+
+<body>
+
+    <div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+  
+<!-- InstanceBeginEditable name="badge" -->
+    <div class="topheader">
+        <img src="../../images/wavebubble/topheaderbadge.png" width="171" height="190">
+    </div>
+<!-- InstanceEndEditable -->
+<span class="topheadertext"><!-- InstanceBeginEditable name="heading" -->Wave Bubble<!-- InstanceEndEditable --></span>
+<span class="topsubheadertext"><!-- InstanceBeginEditable name="Subheading" -->Hardware Design <!-- InstanceEndEditable --></span>
+
+<ul id="menu">
+	<li class="first"></li> 
+  
+    <li>
+      <div class="menuitemtext"><a href="index.html">Overview</a></div>
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a href="faq.html">F.A.Q.</a></div>
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a href="prep.html">Make</a></div>
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a href="hardware.html">Design</a></div>
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a href="download.html">Download</a></div>
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a href="resources.html">Resources</a></div>
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a href="http://ladyada.net/wiki/wavebubble/start">Wiki</a></div>
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a href="http://forums.ladyada.net/">Forums</a></div>
+    </li>
+  
+	<li class="last"></li>
+</ul>
+
+<ul id="nav">
+
+<li><a href="http://www.ladyada.net">Home</a></li>
+
+<li><a href="http://www.ladyada.net/about.html">About<!--[if gte IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+	<li><a href="http://www.ladyada.net/about.html">ladyada.net</a></li>
+	<li><a href="http://www.ladyada.net/portfolio/2007/index.html">Portfolio</a></li>
+	<li><a href="http://www.ladyada.net/pub/research.html">Research</a></li>
+	<li><a href="http://www.ladyada.net/pub/press.html">Press</a></li>
+	<li><a href="http://www.ladyada.net/pub/pub.html">Publication &amp; Presentation</a></li>
+	<li><a href="http://www.flickr.com/photos/ladyada/">Photos</a></li>
+	<li><a href="http://www.ladyada.net/wiki">Wiki (backend)</a></li>
+	</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+
+<li><a href="http://www.ladyada.net/make/">Projects<!--[if gte IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+	<li><a href="hardware.html#nogo">Arduino &#187;<!--[if gte IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<ul>
+    	<li><a href="http://www.ladyada.net/make/logshield/">Datalogger&nbsp;Shield</a></li>
+	    <li><a href="http://www.ladyada.net/make/eshield/">Ethernet&nbsp;Shield</a></li>
+	    <li><a href="http://www.ladyada.net/make/gpsshield/">GPS&nbsp;Shield</a></li>
+	  	<li><a href="http://www.ladyada.net/make/pshield/">Proto&nbsp;Shield</a></li>
+	  	<li><a href="http://www.ladyada.net/make/mshield/">Motor&nbsp;Shield</a></li>
+	  	<li><a href="http://www.ladyada.net/make/waveshield/">Wave&nbsp;Shield</a></li>
+	  </ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	<li><a href="http://www.ladyada.net/make/bbpsup/">Adj.&nbsp;power&nbsp;supply</a></li>
+	<li><a href="http://www.ladyada.net/make/brain/">Brain&nbsp;Machine</a></li>
+	<li><a href="http://www.ladyada.net/make/boarduino/">BoArduino</a></li>
+	<li><a href="http://www.ladyada.net/make/digg/">DIGG&nbsp;Button</a></li>
+	<li><a href="http://www.ladyada.net/make/drawdio/">Drawdio</a></li>
+    <li><a href="http://www.ladyada.net/make/fuzebox/">Fuzebox</a></li>
+    <li><a href="http://www.ladyada.net/make/gamegrrl/">Game&nbsp;Grrl</a></li>
+	<li><a href="http://www.ladyada.net/make/conway/">Game&nbsp;of&nbsp;Life</a></li>
+	<li><a href="http://www.ladyada.net/make/icetube/">Ice&nbsp;Tube&nbsp;clock</a></li>
+    <li><a href="http://www.ladyada.net/make/midisense/">MIDIsense</a></li>
+	<li><a href="http://www.ladyada.net/make/minipov2/">MiniPOV2</a></li>
+	<li><a href="http://www.ladyada.net/make/minipov3/">MiniPOV3</a></li>
+	<li><a href="http://www.ladyada.net/make/minty/">MintyMP3</a></li>
+	<li><a href="http://www.ladyada.net/make/mintyboost/">MintyBoost</a></li>
+    <li><a href="http://www.ladyada.net/make/monochron/">MONOCHRON</a></li>
+    <li><a href="http://www.ladyada.net/make/simreader/">SIM&nbsp;Reader</a></li>
+	<li><a href="http://www.ladyada.net/make/spokepov/">SpokePOV</a></li>
+	<li><a href="http://www.ladyada.net/make/tvbgone/">TV-B-Gone</a></li>
+	<li><a href="http://www.ladyada.net/make/tweetawatt/">Tweet-a-Watt</a></li>
+    <li><a href="http://www.ladyada.net/make/usbtinyisp/">USBtinyISP</a></li>
+	<li><a href="index.html">Wave&nbsp;Bubble</a></li>
+	<li><a href="http://www.ladyada.net/make/x0xb0x/">x0xb0x</a></li>
+	<li><a href="http://www.ladyada.net/make/xbee/">XBee</a></li>
+	<li><a href="http://www.ladyada.net/make/ybox2/">YBox2</a></li>
+	<li><a href="hardware.html#nogo">Quickies &#187;<!--[if gte IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<ul>
+    <li><a href="http://www.ladyada.net/make/usbgamepad/index.html">USB&nbsp;Gamepad</a></li>
+	    <li><a href="http://www.ladyada.net/make/pumpkin/pumpkin.html">Halloween&nbsp;Pumpkin</a></li>
+	    <li><a href="http://www.ladyada.net/make/vintagelight/index.html">Vintage&nbsp;Bike&nbsp;Lite</a></li>
+	  	<li><a href="http://www.ladyada.net/make/sudc4kap/index.html">Kite&nbsp;Arial&nbsp;Photo</a></li>
+	  	<li><a href="http://www.ladyada.net/make/bikestand/index.html">Bike&nbsp;Stand</a></li>
+	  	<li><a href="http://www.ladyada.net/make/bikelite/index.html">LiIon&nbsp;Bike&nbsp;Lite</a></li>
+     	<li><a href="http://www.ladyada.net/make/pogojig/index.html">Pogo&nbsp;Jib</a></li>
+	  	<li><a href="http://www.ladyada.net/make/massprog/index.html">Mass&nbsp;Programming</a></li>
+	  	<li><a href="http://www.ladyada.net/make/solarlipo/index.html">Solar&nbsp;LiPo&nbsp;Charging</a></li>
+	  	<li><a href="http://www.ladyada.net/make/magstripe/index.html">Magstripe&nbsp;Reader</a></li>
+	  	<li><a href="http://www.ladyada.net/make/solarlogger/index.html">Solar&nbsp;Tracker</a></li>
+        <li><a href="http://www.ladyada.net/make/tronbag/">TRON&nbsp;Bag</a></li>
+	  </ul><!--[if lte IE 6]></td></tr></table></a><![endif]-->
+      </li>
+   	<li><a href="http://www.ladyada.net/make/">More...</a></li>
+	<li><a href="http://www.instructables.com/member/ladyada/">->Instructables</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+
+<li><a href="http://www.ladyada.net/learn/">Learn<!--[if gte IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+	<li><a href="http://www.ladyada.net/learn/arduino/">Arduino&nbsp;tutorial</a></li>
+	<li><a href="http://www.ladyada.net/learn/avr/">AVR&nbsp;tutorial</a></li>
+	<li><a href="http://www.ladyada.net/learn/barcodescan/">Barcode&nbsp;scanners</a></li>
+	<li><a href="http://www.ladyada.net/learn/el-wire/">EL&nbsp;Wire&nbsp;tutorial</a></li>
+	<li><a href="http://www.ladyada.net/learn/lcd/">LCDs</a></li>
+	<li><a href="http://www.ladyada.net/learn/arduino/LEDs.html">LEDs</a></li>
+	<li><a href="http://www.ladyada.net/learn/multimeter/">Multimeter&nbsp;tutorial</a></li>
+   	<li><a href="http://www.ladyada.net/learn/scale/">Digital&nbsp;scales</a></li>
+    <li><a href="http://www.ladyada.net/learn/sensors/">Sensors &#187;<!--[if gte IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<ul>
+    	<li><a href="http://www.ladyada.net/learn/sensors/fsr.html">FSR</a></li>
+	    <li><a href="http://www.ladyada.net/learn/sensors/cds.html">CdS&nbsp;Photocell</a></li>
+	    <li><a href="http://www.ladyada.net/learn/sensors/tmp36.html">Temperature</a></li>
+	  	<li><a href="http://www.ladyada.net/learn/sensors/tilt.html">Tilt</a></li>
+	  	<li><a href="http://www.ladyada.net/learn/sensors/pir.html">PIR</a></li>
+        <li><a href="http://www.ladyada.net/learn/sensors/thermocouple.html">Thermocouple</a></li>
+        <li><a href="http://www.ladyada.net/learn/sensors/ir.html">IR&nbsp;Receiver</a></li>
+	  </ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    </li>
+        <li><a href="http://www.ladyada.net/learn/breakoutplus/">Breakout boards &#187;<!--[if gte IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<ul>
+    	<li><a href="http://www.ladyada.net/learn/breakoutplus/ds1307rtc.html">DS1307&nbsp;RTC</a></li>
+        <li><a href="http://www.ladyada.net/learn/sensors/thermocouple.html">MAX6675</a></li>
+        <li><a href="http://www.ladyada.net/learn/products/atmega32u4breakout/">ATmega32u4&nbsp;Breakout+</a></li>
+	  </ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    </li>
+  
+          <li><a href="http://www.ladyada.net/products/">Products &#187;<!--[if gte IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<ul>
+     <li><a href="http://www.ladyada.net/learn/products/i2cspilcdbackpack/">i2c/SPI&nbsp;LCD&nbsp;backpack</a></li>
+     <li><a href="http://www.ladyada.net/learn/products/usbboarduino/">USB&nbsp;Boarduino</a></li>
+     <li><a href="http://www.ladyada.net/learn/products/atmega32u4breakout/">ATmega32u4&nbsp;Breakout+</a></li>
+     <li><a href="http://www.ladyada.net/learn/products/tfttouchbreakout/">2.8&nbsp;TFT&nbsp;touchscreen</a></li>
+     <li><a href="http://www.ladyada.net/learn/products/18tftbreakout/">1.8&nbsp;SPI&nbsp;TFT&nbsp;</a></li>
+     <li><a href="http://www.ladyada.net/learn/products/rfidnfc/">RFID/NFC</a></li>
+     	  </ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    </li>
+      
+	<li><a href="http://www.ladyada.net/learn/chumby/">Chumby&nbsp;Hacker&nbsp;Board</a></li>
+	<li><a href="http://www.ladyada.net/learn/soldering/">Soldering&nbsp;tutorial</a></li>
+	<li><a href="http://www.ladyada.net/learn/powersupply/">Power&nbsp;Supply&nbsp;tutorial</a></li>
+    <li><a href="http://www.ladyada.net/learn/electroknit/">Brother&nbsp;KH-9033&nbsp;tutorial</a></li>
+	<li><a href="http://www.ladyada.net/learn/diykinect/">USB&nbsp;reverse-engineering&nbsp;tutorial</a></li>
+    <li><a href="http://www.ladyada.net/learn/calipers/">Calipers&nbsp;tutorial</a></li>
+    <li><a href="http://www.ladyada.net/products/rgbledstrip/">RGB&nbsp;LED&nbsp;Strips</a></li>
+    <li><a href="http://www.ladyada.net/products/rgbledpixels/">RGB&nbsp;LED&nbsp;Pixels</a></li>
+    <li><a href="http://www.ladyada.net/learn/lipoly/">LiIon&nbsp;&amp;&nbsp;LiPoly&nbsp;Batteries</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+
+	
+<li><a href="http://www.ladyada.net/library/">Library<!--[if gte IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>	
+	<li><a href="http://www.ladyada.net/library/arduino/">Arduino&nbsp;Hacks</a></li>
+    <li><a href="http://www.ladyada.net/library/batteries.html">Batteries</a></li>
+	<li><a href="http://www.ladyada.net/library/diyboostcalc.html">Boost&nbsp;Calc</a></li>
+    <li><a href="http://www.ladyada.net/library/equipt/">E.E.&nbsp;Tools</a></li>
+	<li><a href="http://www.ladyada.net/library/hackcomputer.html">E.E.&nbsp;Computer</a></li>
+    <li><a href="http://www.ladyada.net/library/procure/">Find&nbsp;Parts</a></li>
+	<li><a href="http://www.ladyada.net/library/kits/">Kits</a></li>
+	<li><a href="http://www.ladyada.net/library/laser/">Laser</a></li>
+    <li><a href="http://www.ladyada.net/library/ucannoyances.html">uC Annoyances</a></li>
+	<li><a href="http://www.ladyada.net/library/openhardware/">Open Source Hardware</a></li>
+	<li><a href="http://www.ladyada.net/library/pcb/">PCB&nbsp;Design&nbsp;&amp;&nbsp;Tips</a></li>
+	<li><a href="http://www.ladyada.net/library/picvsavr.html">PIC&nbsp;vs.&nbsp;AVR</a></li>
+	<li><a href="http://www.ladyada.net/library/software/index.html">Software</a></li>
+	<li><a href="http://www.ladyada.net/library/smt/index.html">SMT</a></li>
+    <li><a href="http://www.ladyada.net/library/zencart/">Zen-Cart&nbsp;Mods</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+
+<li><a href="http://www.adafruit.com/blog/">Blog</a></li>
+
+<li><a href="http://www.adafruit.com" target="_blank">Store</a></li>
+
+<li><a href="http://forums.adafruit.com/" target="_blank">Forums</a></li>
+
+</ul>
+
+<div id="searchbox">
+<!-- Google CSE Search Box Begins -->
+<form id="searchbox_012941403977924873237:omv8mprm6ek" action="http://www.google.com/cse" target="_top"> <input type="hidden" name="cx" value="012941403977924873237:omv8mprm6ek" /> <input name="q" type="text" size="23" /><br /> <span class="style1">ladyada.net</span> <input type="submit" name="sa" value="Search" /> <input type="hidden" name="cof" value="FORID:0" /> </form><script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_012941403977924873237%3Aomv8mprm6ek"></script>
+<!-- Google CSE Search Box Ends -->
+</div>
+
+<div id="lefttcol">
+<!-- this is just a buffer -->
+</div>
+
+<div id="content">
+  <!-- InstanceBeginRepeat name="texts" --><!-- InstanceBeginRepeatEntry -->
+  <div class="textblockheader"> <!-- InstanceBeginEditable name="Header" -->Enclosure<!-- InstanceEndEditable --> </div>
+  <div class="textblock"> <!-- InstanceBeginEditable name="text" -->The layout for the parts described here fit into a casing approximately .7" x 4" x 3.2", and is designed to slip into an empty cigarette pack, old iPod casing (older/larger iPods are preferred as they are slightly larger than the latest revisions) or an altoids tin (if external antennas are used). This enclosure layout is inspired by <a href="http://www.ladyada.net/rant/?p=26">a cellphone jammer design</a> I was shown by a friend (research online shows it to retail for $950). To fit all the parts into such a small space, 2 or 3 PCBs are bolted together, comprising of the battery/charger circuitry and half of a stripline center-feed dipole antenna, the power-supply/wavegen/VCO/PLL/gainstage circuitry and the cover, which has the other half stripline antennas. <!-- InstanceEndEditable --> </div>
+  <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+  <div class="textblockheader"> <!-- InstanceBeginEditable name="Header" -->Battery Board <!-- InstanceEndEditable --> </div>
+  <div class="textblock"> <!-- InstanceBeginEditable name="text" -->The first PCB is the battery board, which contains the battery, battery charger and serial TTL converter circuitry. At this time there are two battery board options. One contains a lithium-ion/lithium-polymer battery, lithium battery charger circuitry and a USB/serial chip. The other version is a low-cost (but larger) alternative and has a battery holder for 3 AAA batteries (the USB/serial converter is still included). <!-- InstanceEndEditable --> </div>
+  <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+  <div class="textblockheader"> <!-- InstanceBeginEditable name="Header" -->Battery <!-- InstanceEndEditable --> </div>
+  <div class="textblock"> <!-- InstanceBeginEditable name="text" -->
+            <p>Cell phone jammers require a lot of power since the RF signal must be amplified a great deal: enough to drown out local tower signal and overload the analog front end of a cell phone. The basic design shown here has two oscillator/gain stages, for +25 dBm/+20dBm for the low and high channels: 300 mW/100mW = 0.4 Watts total output power spread over the bandwidth being jammed. Yet, in order to remain portable, the battery must be small and light. Therefore, a high power-density battery (such as Alkaline, NiMH or LiIon) is desirable. For the particular enclosure design here, I used a Li-ion/Li-Poly battery as it is thin enough to fit in between two of the circuit boards and maintain the desired form-factor.</p>
+            <p>Since there is a high current draw from the battery and these batteries are at risk for auto-combustion at such drains, a battery protection circuit (<a href="http://www.batteryspace.com/index.asp?PageAction=VIEWPROD&amp;ProdID=2721">such as this one available for about $1.50 from batteryspace.com</a>) OEM cell phone batteries have the protection circuitry built in and are a good low-cost replacement if purchased as surplus.</p>
+            <p>NiMH rechargeables and/or Alkaline 1.5V batteries are also a good choice as a battery as they have high power density, are less likely to explode, and are available everywhere. The input voltage should range between 3 to 5 volts so 2-3 Alkaline or 3-4 NiMH batteries will provide the best power arrangement. To get more power, do not use more batteries: above 5V input the circuit will not function correctly, instead use larger (alkaline AA, C, D or lead acid) batteries.</p>
+            <p>Each VCO/gainstage requires approximately 300mA at 3.6V (a standard cellphone arrangement will require two, for 600mA total) so whichever battery is chosen, it should be at least 1AH to be able to handle the high drain.</p><!-- InstanceEndEditable --> </div>
+  <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+  <div class="textblockheader"> <!-- InstanceBeginEditable name="Header" -->Battery Charger <!-- InstanceEndEditable --> </div>
+  <div class="textblock"> <!-- InstanceBeginEditable name="text" --><a href="http://www.batteryuniversity.com/partone-12.htm">To charge the lithium-ion battery</a>, a specialty LiIon charger chip must be used. The LM3622-4.2 was chosen for its low cost and large input voltage range. A current-sense resistor and PNP pass transistor is needed as well. The battery can be recharged via the mini-B USB jack (5V) or the 1.7mm DC jack (5-12V). In theory you can run the device right from the USB/DC jack (if it provides more than 500mA) although the USB jack can't provide enough current for 2 VCO/gainstages running at the same time. Either way, plugging into the DC jack/USB will increase the run time considerably<!-- InstanceEndEditable --> </div>
+  <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+  <div class="textblockheader"> <!-- InstanceBeginEditable name="Header" -->Serial converter <!-- InstanceEndEditable --> </div>
+  <div class="textblock"> <!-- InstanceBeginEditable name="text" -->
+            <p>The USB/ttl converter (on the battery board) can be used to upload new firmware using the bootloader and view debug messages or possibly send commands.</p>
+            <p>The current design uses a <a href="http://www.ftdichip.com/Products/FT232R.htm">FTDI FT232RL USB/serial converter chip</a>. It's supported by every moden OS and looks like a serial port when plugged in. Other options are available, including the FT232BM (older gen, also SMT) or the <a href="http://www.kmitl.ac.th/%7Ekswichit%20/MAX232/MAX232.htm">MAX232 family serial level </a>converters.</p>
+  <!-- InstanceEndEditable --> </div>
+  <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+  <div class="textblockheader"> <!-- InstanceBeginEditable name="Header" -->Main board<!-- InstanceEndEditable --> </div>
+  <div class="textblock"> <!-- InstanceBeginEditable name="text" -->
+        <p>The main board is the workhorse of the RF jammer, comprising of the many powersupplies, digital/analog/PLL tuning circuitry, VCOs, and gain stages. The current layout is designed to be fab'd on standard FR4 0.062", a silkscreen may help placement, but it has been removed around the RF circuitry so that adding/moving the required passives around is easy. Thinner or different dielectric material may also be used, in which case the RF traces should be adjusted to maintain the correct stripline impedance (MEME link to impedance calcuator). Note that paper phenolic (cheap 'paper-layer' prototyping circuit boards) cannot be used.</p>
+        <p>In general, 1206 and SOIC components have been used whenever possible. In some cases, such as for the RF section, and certain components unavailable in SOIC, smaller parts such as TSSOP or 0603 have been used.</p>
+        <!-- InstanceEndEditable --> </div>
+  <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+  <div class="textblockheader"> <!-- InstanceBeginEditable name="Header" -->Power supplies<!-- InstanceEndEditable --> </div>
+  <div class="textblock"> <!-- InstanceBeginEditable name="text" -->
+<p>        There are multiple power supplies, 3 DC/DC step-up converters and 2 linear drop outs. The 3 DC/DC stepups are for 5V, 12V, and 24V and are for powering the analog/RF system. The 2 LDOs are for 3.3 and 2.85V and are mostly used for the digital logic.   </p>
+<p> The 5V power supply is used to power the RF gain stages and provide a high enough voltage to guarantee proper input to the 2 LDOs. Each SXA-389B gain stage requires around 110mA at 5V and the LDO's will need around 10mA to power their subsections. If a different gain stage is to be used, the voltage and current requirements are likely to change and this stage should be redesigned. The current DC/DC converter used is the LM2733X which is inexpensive and high frequency.</p>
+<p> The 12V supply is used to power the VCOs. The VCOs used here are high-power and require 25-40mA at 12V. A simple LT1301 is used, a high quality DC/DC converter that is pre-set for 12V. Other VCOs may require 8 or 5V in which case this stage may been to be redesigned to accomodate.</p>
+<p>The 24V supply is to provide a high enough bias for the VCO control voltage. VCOs over require 12-28V bias voltages. A resistor divider sets the voltage, it should be high enough to provide a drop out (around 1V) above the highest voltage required but not be any higher than that. Only 1mA is required so it's not a particularly powerful supply. Currently an LT1173 is used, but this part is likely to be replaced by a less-expensive part in future revisions.</p>
+<p>The 3.3V LDO powers the microcontroller, the waveform generator and the digital potentiometers. If the 5V supply is actually 5V (and not 6 or 7V) then the chip can be left out and 5V jumpered to the 3.3V. However, the 3.3V will be a little cleaner which may be desirable and all things being equal, it should probably be left in. A TI chip (the 27333 is used), but there are many other SOT23-5 pin compatible chips.
+<p>The 2.5V supply is for powering the PLL, which requires a <3V supply, if the PLL is not installed, dont install this supply.</p>
+<!-- InstanceEndEditable --> </div>
+  <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+  <div class="textblockheader"> <!-- InstanceBeginEditable name="Header" -->Microcontroller<!-- InstanceEndEditable --> </div>
+  <div class="textblock"> <!-- InstanceBeginEditable name="text" -->
+        <p>The microcontroller is an essential component of this digitally-tuned jammer, even if the PLL is not used. It sets the digital potentiometers to adjust the bandwidth being jammed as well as creating the PWM output that sets the center frequency of the band. It also sets whether the jammer is working at high (20KHz) or low (100Hz) speed. If the PLL is installed, the micro will use it to fine-tune both the bandwidth and center frequency to assure the precise band is being jammed. The microcontroller also controls an LED to signal its current state to the user and operates the power switches (if they are being used) for each RF stage.</p>
+        <p>An ATmega88 is used, although an ATmega48 or 168 is pin and function compatible (just with less/more program storage). An ATmega8 is also acceptable although the firmware may need adjustments. The microcontroller is programmed through the 6-pin standard ISP header, and can also be programmed with a bootloader for firmware upgrades thru the USB port on the battery board. The microcontroller uses the onboard oscillator, so the fuses should be burned for the 8MHz internal oscillator. </p>
+        <p>Other microcontrollers (such as PIC, SX, etc) can theoretically be used, but as this one is inexpensive, has free development support and onboard PWM, it seems optimal.</p>
+        <!-- InstanceEndEditable --> </div>
+  <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+  <div class="textblockheader"> <!-- InstanceBeginEditable name="Header" -->Sawtooth Generator<!-- InstanceEndEditable --> </div>
+  <div class="textblock"> <!-- InstanceBeginEditable name="text" -->
+        <p>In order to sweep the VCO in a band, a sawtooth wave must be applied. A triangle wave may also be used: the effectiveness of different waveforms has not been analyzed but 'intuition' implies a sawtooth as ideal.</p>
+        <p> <a href="http://www.allaboutcircuits.com/vol_6/chpt_6/7.html">A common sawtooth circuit</a>, a CMOS 555 current driving into a capacitor, is used. The frequency of the sawtooth can be adjusted,<a href="http://www.flickr.com/photos/ladyada/126612337/in/set-72057594103963559/"> but examining 'professional' cell phone jammers has shown that most use 20KHz-200KHz oscillators</a>. The frequency can be adjusted by manipulating a microcontroller pin that provides current to the transistor that forms the current source. if the pin is tied high, the 100ohm series resistor sets the frequency (20KHz). If the pin is pulled up thru a 100K pullup resistor (built into the microcontroller), the frequency goes down to about 100Hz. If the pin is pulled low, no current flows and the oscillator stops.
+          </p>
+               </p>
+  <!-- InstanceEndEditable --> </div>
+  <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+  <div class="textblockheader"> <!-- InstanceBeginEditable name="Header" -->Digital waveform control <!-- InstanceEndEditable --> </div>
+  <div class="textblock"> <!-- InstanceBeginEditable name="text" -->
+    <p>Once a sawtooth has been generated, it must be adjusted before feeding into the VCO. First the wave must be doubled: one for each VCO. Then, the peak-to-peak voltage for each must be adjusted so that the tuning voltage sweeps the desired bandwidth on that VCO. Finally a DC bias must be added to set the center frequency.</p>
+    <p>To generate the DC bias, the on-chip dual PWM is used. The PWM system has a maximum resolution of 10 bits but 8 bit accuracy seems sufficient. The PWM level is adjusted by assigning values to OCR1A / OCR1B. An LC (RC is also fine) network filters out the high frequency component.</p>
+    <p>To adjust the pp voltage, <a href="http://en.wikipedia.org/wiki/Digitally_controlled_potentiometer#Digital_control">digital potentiometers</a> are set up as variable voltage dividers: the wipers carrying the attenuated signal. 10K are specified but 1K are also good, although dissipate more power. The digital pots are SPI controlled and the microcontroller is used to set the values.</p>
+    <p>After attenuation, the DC bias is coupled in and there is a final gain/buffering stage. This stage amplifies both the DC bias as well as the gain. In theory, it would make sense to use the initial buffers as gain stages and then attenuate instead of attenuating and them amplifying. However, the restrictions of the digital potentiometers: they can only handle up to ~5V signals, requires the configuration used.</p>
+    <p>The final stage should be set so that the DC bias (3.3V or whatever the micro is running at) multiplied by the gain will not exceed Vtune of the VCO. This protects against damage to the most expensive component if the Wave Bubble is misconfigured and tries to drive a lower frequency VCO than expected. </p>
+    <p>An optional diode at the input to the VCO also protects against going below ground. An alternative is an approproately chosen zener diode <a href="http://hyperphysics.phy-astr.gsu.edu/hbase/electronic/limiter.html#c1">configured as a clamp</a>.</p>
+  <!-- InstanceEndEditable --> </div>
+  <!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat --></div>
+
+<div id="rightcol">
+<!-- this is just a buffer -->
+</div>
+
+
+
+<div id="history">
+<!-- #BeginDate format:Am1m -->May 17, 2011  20:07<!-- #EndDate --></div>
+
+</body>
+<!-- InstanceEnd --></html>

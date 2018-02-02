@@ -1,0 +1,490 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/make/wavebubble/wavebubblecss-make.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<link rel="alternate" type="application/rss+xml" title="ladyada.net blog  RSS Feed" href="http://www.ladyada.net/feed/" />
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7723544-2");
+pageTracker._trackPageview();
+} catch(err) {}</script> 
+
+<!-- InstanceBeginEditable name="overlib" -->
+<script type="text/javascript" src="../../javascript/overlib.js"><!-- overLIB (c) Erik Bosrup --></script>
+<!-- InstanceEndEditable -->
+<meta http-equiv="imagetoolbar" content="no" />
+<LINK REL=stylesheet HREF="../../css/make.css" TYPE="text/css">
+<LINK REL=stylesheet HREF="../../css/skeleton.css" TYPE="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Wave Bubble -  Finishing up</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" -->
+
+
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+
+    <div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+  
+<!-- InstanceBeginEditable name="badge" -->
+<div class="topheader" ><img src="../../images/wavebubble/topheaderbadge.png" width="171" height="190"></div>
+<!-- InstanceEndEditable -->
+<span class="topheadertext"><!-- InstanceBeginEditable name="heading" -->Wave Bubble<!-- InstanceEndEditable --></span>
+<span class="topsubheadertext"><!-- InstanceBeginEditable name="Subheading" -->Finishing up <!-- InstanceEndEditable --></span>
+
+<ul id="menu">
+	<li class="first"></li> 
+  
+    <li>
+      <div class="menuitemtext"><a href="index.html">Overview</a></div>
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a href="faq.html">F.A.Q.</a></div>
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a href="prep.html">Make</a></div>
+	  	  <ul>
+		<li>
+		  <div class="menuitemtext"><a href="prep.html">Preparation</a></div>
+		</li>
+		<li>
+		  <div class="menuitemtext"><a href="battery.html">Battery</a></div>
+		</li>	
+		<li>
+		  <div class="menuitemtext"><a href="powersupply.html">Power supp. </a></div>
+		</li>
+		<li>
+		  <div class="menuitemtext"><a href="tuning.html">Tuning sys</a> </div>
+		</li>
+		<li>
+		  <div class="menuitemtext"><a href="vco.html">VCOs</a></div>
+		</li>
+
+		<li><div class="menuitemtext"><a href="pll.html">PLL</a></div>
+		</li>
+				<li>
+				  <div class="menuitemtext"><a href="config.html">Config.</a></div>
+		</li>
+
+		<li>
+		  <div class="menuitemtext"><a href="gain.html">Gain stage</a>
+		</div>
+		</li>
+
+		<li>
+		  <div class="menuitemtext"><a href="finishing.html">Finishing</a>
+		</div>
+		</li>
+		</ul>
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a href="hardware.html">Design</a></div>
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a href="download.html">Download</a></div>
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a href="resources.html">Resources</a></div>
+    </li>
+  
+    <li><div class="menuitemtext"><a href="http://ladyada.net/wiki/wavebubble/start">Wiki</a><a href="http://www.ladyada.net/"></a></div>
+    </li>
+  
+    <li>
+      <div class="menuitemtext"><a href="http://forums.ladyada.net/">Forums</a></div>
+    </li>
+  
+	<li class="last"></li>
+</ul>
+
+<ul id="nav">
+
+<li><a href="http://www.ladyada.net">Home</a></li>
+
+<li><a href="http://www.ladyada.net/about.html">About<!--[if gte IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+	<li><a href="http://www.ladyada.net/about.html">ladyada.net</a></li>
+	<li><a href="http://www.ladyada.net/portfolio/2007/index.html">Portfolio</a></li>
+	<li><a href="http://www.ladyada.net/pub/research.html">Research</a></li>
+	<li><a href="http://www.ladyada.net/pub/press.html">Press</a></li>
+	<li><a href="http://www.ladyada.net/pub/pub.html">Publication &amp; Presentation</a></li>
+	<li><a href="http://www.flickr.com/photos/ladyada/">Photos</a></li>
+	<li><a href="http://www.ladyada.net/wiki">Wiki (backend)</a></li>
+	</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+
+<li><a href="http://www.ladyada.net/make/">Projects<!--[if gte IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+	<li><a href="finishing.html#nogo">Arduino &#187;<!--[if gte IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<ul>
+    	<li><a href="http://www.ladyada.net/make/logshield/">Datalogger&nbsp;Shield</a></li>
+	    <li><a href="http://www.ladyada.net/make/eshield/">Ethernet&nbsp;Shield</a></li>
+	    <li><a href="http://www.ladyada.net/make/gpsshield/">GPS&nbsp;Shield</a></li>
+	  	<li><a href="http://www.ladyada.net/make/pshield/">Proto&nbsp;Shield</a></li>
+	  	<li><a href="http://www.ladyada.net/make/mshield/">Motor&nbsp;Shield</a></li>
+	  	<li><a href="http://www.ladyada.net/make/waveshield/">Wave&nbsp;Shield</a></li>
+	  </ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	<li><a href="http://www.ladyada.net/make/bbpsup/">Adj.&nbsp;power&nbsp;supply</a></li>
+	<li><a href="http://www.ladyada.net/make/brain/">Brain&nbsp;Machine</a></li>
+	<li><a href="http://www.ladyada.net/make/boarduino/">BoArduino</a></li>
+	<li><a href="http://www.ladyada.net/make/digg/">DIGG&nbsp;Button</a></li>
+	<li><a href="http://www.ladyada.net/make/drawdio/">Drawdio</a></li>
+    <li><a href="http://www.ladyada.net/make/fuzebox/">Fuzebox</a></li>
+    <li><a href="http://www.ladyada.net/make/gamegrrl/">Game&nbsp;Grrl</a></li>
+	<li><a href="http://www.ladyada.net/make/conway/">Game&nbsp;of&nbsp;Life</a></li>
+	<li><a href="http://www.ladyada.net/make/icetube/">Ice&nbsp;Tube&nbsp;clock</a></li>
+    <li><a href="http://www.ladyada.net/make/midisense/">MIDIsense</a></li>
+	<li><a href="http://www.ladyada.net/make/minipov2/">MiniPOV2</a></li>
+	<li><a href="http://www.ladyada.net/make/minipov3/">MiniPOV3</a></li>
+	<li><a href="http://www.ladyada.net/make/minty/">MintyMP3</a></li>
+	<li><a href="http://www.ladyada.net/make/mintyboost/">MintyBoost</a></li>
+    <li><a href="http://www.ladyada.net/make/monochron/">MONOCHRON</a></li>
+    <li><a href="http://www.ladyada.net/make/simreader/">SIM&nbsp;Reader</a></li>
+	<li><a href="http://www.ladyada.net/make/spokepov/">SpokePOV</a></li>
+	<li><a href="http://www.ladyada.net/make/tvbgone/">TV-B-Gone</a></li>
+	<li><a href="http://www.ladyada.net/make/tweetawatt/">Tweet-a-Watt</a></li>
+    <li><a href="http://www.ladyada.net/make/usbtinyisp/">USBtinyISP</a></li>
+	<li><a href="index.html">Wave&nbsp;Bubble</a></li>
+	<li><a href="http://www.ladyada.net/make/x0xb0x/">x0xb0x</a></li>
+	<li><a href="http://www.ladyada.net/make/xbee/">XBee</a></li>
+	<li><a href="http://www.ladyada.net/make/ybox2/">YBox2</a></li>
+	<li><a href="finishing.html#nogo">Quickies &#187;<!--[if gte IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<ul>
+    <li><a href="http://www.ladyada.net/make/usbgamepad/index.html">USB&nbsp;Gamepad</a></li>
+	    <li><a href="http://www.ladyada.net/make/pumpkin/pumpkin.html">Halloween&nbsp;Pumpkin</a></li>
+	    <li><a href="http://www.ladyada.net/make/vintagelight/index.html">Vintage&nbsp;Bike&nbsp;Lite</a></li>
+	  	<li><a href="http://www.ladyada.net/make/sudc4kap/index.html">Kite&nbsp;Arial&nbsp;Photo</a></li>
+	  	<li><a href="http://www.ladyada.net/make/bikestand/index.html">Bike&nbsp;Stand</a></li>
+	  	<li><a href="http://www.ladyada.net/make/bikelite/index.html">LiIon&nbsp;Bike&nbsp;Lite</a></li>
+     	<li><a href="http://www.ladyada.net/make/pogojig/index.html">Pogo&nbsp;Jib</a></li>
+	  	<li><a href="http://www.ladyada.net/make/massprog/index.html">Mass&nbsp;Programming</a></li>
+	  	<li><a href="http://www.ladyada.net/make/solarlipo/index.html">Solar&nbsp;LiPo&nbsp;Charging</a></li>
+	  	<li><a href="http://www.ladyada.net/make/magstripe/index.html">Magstripe&nbsp;Reader</a></li>
+	  	<li><a href="http://www.ladyada.net/make/solarlogger/index.html">Solar&nbsp;Tracker</a></li>
+        <li><a href="http://www.ladyada.net/make/tronbag/">TRON&nbsp;Bag</a></li>
+	  </ul><!--[if lte IE 6]></td></tr></table></a><![endif]-->
+      </li>
+   	<li><a href="http://www.ladyada.net/make/">More...</a></li>
+	<li><a href="http://www.instructables.com/member/ladyada/">->Instructables</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+
+<li><a href="http://www.ladyada.net/learn/">Learn<!--[if gte IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+	<li><a href="http://www.ladyada.net/learn/arduino/">Arduino&nbsp;tutorial</a></li>
+	<li><a href="http://www.ladyada.net/learn/avr/">AVR&nbsp;tutorial</a></li>
+	<li><a href="http://www.ladyada.net/learn/barcodescan/">Barcode&nbsp;scanners</a></li>
+	<li><a href="http://www.ladyada.net/learn/el-wire/">EL&nbsp;Wire&nbsp;tutorial</a></li>
+	<li><a href="http://www.ladyada.net/learn/lcd/">LCDs</a></li>
+	<li><a href="http://www.ladyada.net/learn/arduino/LEDs.html">LEDs</a></li>
+	<li><a href="http://www.ladyada.net/learn/multimeter/">Multimeter&nbsp;tutorial</a></li>
+   	<li><a href="http://www.ladyada.net/learn/scale/">Digital&nbsp;scales</a></li>
+    <li><a href="http://www.ladyada.net/learn/sensors/">Sensors &#187;<!--[if gte IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<ul>
+    	<li><a href="http://www.ladyada.net/learn/sensors/fsr.html">FSR</a></li>
+	    <li><a href="http://www.ladyada.net/learn/sensors/cds.html">CdS&nbsp;Photocell</a></li>
+	    <li><a href="http://www.ladyada.net/learn/sensors/tmp36.html">Temperature</a></li>
+	  	<li><a href="http://www.ladyada.net/learn/sensors/tilt.html">Tilt</a></li>
+	  	<li><a href="http://www.ladyada.net/learn/sensors/pir.html">PIR</a></li>
+        <li><a href="http://www.ladyada.net/learn/sensors/thermocouple.html">Thermocouple</a></li>
+        <li><a href="http://www.ladyada.net/learn/sensors/ir.html">IR&nbsp;Receiver</a></li>
+	  </ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    </li>
+        <li><a href="http://www.ladyada.net/learn/breakoutplus/">Breakout boards &#187;<!--[if gte IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<ul>
+    	<li><a href="http://www.ladyada.net/learn/breakoutplus/ds1307rtc.html">DS1307&nbsp;RTC</a></li>
+        <li><a href="http://www.ladyada.net/learn/sensors/thermocouple.html">MAX6675</a></li>
+        <li><a href="http://www.ladyada.net/learn/products/atmega32u4breakout/">ATmega32u4&nbsp;Breakout+</a></li>
+	  </ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    </li>
+  
+          <li><a href="http://www.ladyada.net/products/">Products &#187;<!--[if gte IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<ul>
+     <li><a href="http://www.ladyada.net/learn/products/i2cspilcdbackpack/">i2c/SPI&nbsp;LCD&nbsp;backpack</a></li>
+     <li><a href="http://www.ladyada.net/learn/products/usbboarduino/">USB&nbsp;Boarduino</a></li>
+     <li><a href="http://www.ladyada.net/learn/products/atmega32u4breakout/">ATmega32u4&nbsp;Breakout+</a></li>
+     <li><a href="http://www.ladyada.net/learn/products/tfttouchbreakout/">2.8&nbsp;TFT&nbsp;touchscreen</a></li>
+     <li><a href="http://www.ladyada.net/learn/products/18tftbreakout/">1.8&nbsp;SPI&nbsp;TFT&nbsp;</a></li>
+     <li><a href="http://www.ladyada.net/learn/products/rfidnfc/">RFID/NFC</a></li>
+     	  </ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    </li>
+      
+	<li><a href="http://www.ladyada.net/learn/chumby/">Chumby&nbsp;Hacker&nbsp;Board</a></li>
+	<li><a href="http://www.ladyada.net/learn/soldering/">Soldering&nbsp;tutorial</a></li>
+	<li><a href="http://www.ladyada.net/learn/powersupply/">Power&nbsp;Supply&nbsp;tutorial</a></li>
+    <li><a href="http://www.ladyada.net/learn/electroknit/">Brother&nbsp;KH-9033&nbsp;tutorial</a></li>
+	<li><a href="http://www.ladyada.net/learn/diykinect/">USB&nbsp;reverse-engineering&nbsp;tutorial</a></li>
+    <li><a href="http://www.ladyada.net/learn/calipers/">Calipers&nbsp;tutorial</a></li>
+    <li><a href="http://www.ladyada.net/products/rgbledstrip/">RGB&nbsp;LED&nbsp;Strips</a></li>
+    <li><a href="http://www.ladyada.net/products/rgbledpixels/">RGB&nbsp;LED&nbsp;Pixels</a></li>
+    <li><a href="http://www.ladyada.net/learn/lipoly/">LiIon&nbsp;&amp;&nbsp;LiPoly&nbsp;Batteries</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+
+	
+<li><a href="http://www.ladyada.net/library/">Library<!--[if gte IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>	
+	<li><a href="http://www.ladyada.net/library/arduino/">Arduino&nbsp;Hacks</a></li>
+    <li><a href="http://www.ladyada.net/library/batteries.html">Batteries</a></li>
+	<li><a href="http://www.ladyada.net/library/diyboostcalc.html">Boost&nbsp;Calc</a></li>
+    <li><a href="http://www.ladyada.net/library/equipt/">E.E.&nbsp;Tools</a></li>
+	<li><a href="http://www.ladyada.net/library/hackcomputer.html">E.E.&nbsp;Computer</a></li>
+    <li><a href="http://www.ladyada.net/library/procure/">Find&nbsp;Parts</a></li>
+	<li><a href="http://www.ladyada.net/library/kits/">Kits</a></li>
+	<li><a href="http://www.ladyada.net/library/laser/">Laser</a></li>
+    <li><a href="http://www.ladyada.net/library/ucannoyances.html">uC Annoyances</a></li>
+	<li><a href="http://www.ladyada.net/library/openhardware/">Open Source Hardware</a></li>
+	<li><a href="http://www.ladyada.net/library/pcb/">PCB&nbsp;Design&nbsp;&amp;&nbsp;Tips</a></li>
+	<li><a href="http://www.ladyada.net/library/picvsavr.html">PIC&nbsp;vs.&nbsp;AVR</a></li>
+	<li><a href="http://www.ladyada.net/library/software/index.html">Software</a></li>
+	<li><a href="http://www.ladyada.net/library/smt/index.html">SMT</a></li>
+    <li><a href="http://www.ladyada.net/library/zencart/">Zen-Cart&nbsp;Mods</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+
+<li><a href="http://www.adafruit.com/blog/">Blog</a></li>
+
+<li><a href="http://www.adafruit.com" target="_blank">Store</a></li>
+
+<li><a href="http://forums.adafruit.com/" target="_blank">Forums</a></li>
+
+</ul>
+
+<div id="searchbox">
+<!-- Google CSE Search Box Begins -->
+<form id="searchbox_012941403977924873237:omv8mprm6ek" action="http://www.google.com/cse" target="_top"> <input type="hidden" name="cx" value="012941403977924873237:omv8mprm6ek" /> <input name="q" type="text" size="23" /><br /> <span class="style1">ladyada.net</span> <input type="submit" name="sa" value="Search" /> <input type="hidden" name="cof" value="FORID:0" /> </form><script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_012941403977924873237%3Aomv8mprm6ek"></script>
+<!-- Google CSE Search Box Ends -->
+</div>
+
+<div id="lefttcol">
+<!-- this is just a buffer -->
+</div>
+
+<div id="content">
+  <!-- InstanceBeginRepeat name="texts" --><!-- InstanceBeginRepeatEntry -->
+  <div class="textblockheader"> <!-- InstanceBeginEditable name="Header" -->Finishing notes <!-- InstanceEndEditable --> </div>
+  <div class="textblock"> <!-- InstanceBeginEditable name="text" -->
+    <p align="center"><a href="http://www.flickr.com/photos/ladyada/332373453"><img src="http://static.flickr.com/146/332373453_a555f8207d.jpg" width=500 height=454></a>></p>
+    <p>If you are using external antennas, you'll need to solder on RP-SMA or SMA connectors. Antennas come in either flavor so get 2 of each and then when you know what antenna you're using, solder the proper connector in. </p>
+    <p>Now that everything is up and running, assemble it using the standoffs. You may want to try a bunch of different sizes depending on how big your battery is. </p>
+    <p>Now play around with different bands! Note that the gain stage is 'tuned' to respond to certain frequencies so you may have to adjust parts to get good performance. </p>
+  <!-- InstanceEndEditable --> </div>
+  <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+  <div class="textblockheader"> <!-- InstanceBeginEditable name="Header" -->Finishing parts <!-- InstanceEndEditable --> </div>
+  <div class="textblock"> <!-- InstanceBeginEditable name="text" -->
+<table width="100%" border="2" cellpadding="5" cellspacing="0" bgcolor="#CCCCCC">
+      <tr>
+        <th width="30%" scope="col">Part # &amp; Datasheets </th>
+        <th width="22%" scope="col"><div align="left">Description</div></th>
+        <th width="15%" scope="col"><div align="center">Distributor</div></th>
+        <th width="7%" scope="col"><div align="center">Qty</div></th>
+        <th width="8%" scope="col"><div align="right">Cost</div></th>
+        <th width="8%" scope="col"><div align="right">Total</div></th>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF"><a href="http://rocky.digikey.com/WebLib/Linx%20Technologies/Web%20Data/RPSMA%20Connector%20Line.pdf">SMA or RP-SMA edge launch</a></td>
+        <td> If using external antennas </td>
+        <td><div align="center"><a href="mailto:?Subject=Digi-Key%20Part%20Link&Body=http://www.digikey.com/scripts/DkSearch/dksus.dll?PName?Name=CONREVSMA003.062-ND&Site=US">Digikey</a><br>
+            <a href="http://www.sparkfun.com/commerce/product_info.php?products_id=593">SparkFun</a></div></td>
+        <td><div align="center">2</div></td>
+        <td>$2.00</td>
+        <td>$4.00</td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">4-40 x 1/4&quot; aluminium M/F standoff</td>
+        <td>Assembly standoff</td>
+        <td><div align="center">McMaster-Carr </div></td>
+        <td><div align="center">4</div></td>
+        <td>$0.73</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">4-40 x 3/8 &quot; aluminium F/F standoff</td>
+        <td>Assembly standoff</td>
+        <td><div align="center">McMaster-Carr </div></td>
+        <td><div align="center">4</div></td>
+        <td>$0.27</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">4-40 x 1/4&quot; machine </td>
+        <td>Assembly screws</td>
+        <td><div align="center">Digikey</div></td>
+        <td><div align="center">8</div></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+  <!-- InstanceEndEditable --> </div>
+  <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+  <div class="textblockheader"> <!-- InstanceBeginEditable name="Header" -->Antennas<!-- InstanceEndEditable --> </div>
+  <div class="textblock"> <!-- InstanceBeginEditable name="text" --><table width="100%" border="2" cellpadding="5" cellspacing="0" bgcolor="#CCCCCC">
+      <tr>
+        <td bgcolor="#FFFFFF"><a href="http://rocky.digikey.com/WebLib/Linx%20Technologies/Web%20Data/CW%20Series.pdf">ANT-868-CW-
+QW</a></td>
+        <td>1/4 wave whip antenna for GSM 850 band (RP-SMA, straight) </td>
+        <td><a href="http://www.digikey.com/scripts/DkSearch/dksus.dll?PName?Name=ANT-868-CW-QW-ND&Site=US">Digikey</a></td>
+        <td>$6.78</td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF"><a href="http://www.antennafactor.com/documents/ANT-868-CW-HW_Data_Sheets.pdf">ANT-868-CW-HW</a></td
+>
+        <td>1/2 wave dipole whip antenna for GSM 850 band (RP-SMA, straight)</td>
+        <td>Digikey</td>
+        <td>$7.64</td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF"><a href="http://www.antennafactor.com/documents/ANT-868-CW-HWR-xxx_Data_Sheet.pdf">ANT-868-CW-HWR-RPS</a></td>
+        <td>1/2 wave dipole whip antenna for GSM 850 band (RP-SMA, rotating)</td>
+        <td>Digikey</td>
+        <td> $8.98</td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">&nbsp;</td>
+        <td>1/2 wave dipole antenna for 1.9GHz (RP-SMA, rotating) </td>
+        <td><a href="http://www.hyperlinktech.com/web/1.9ghz_pcs_rubber_duck_antenna_3dbi_rsp.php">Hyperlinktech<br>
+        </a><a href="http://sharperconcepts.zoovy.com/category/antennas_rubber_duck.19_ghz_rubber_duck_antennas/">Sharper Concepts</a></td>
+        <td>$9.00</td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">900 Mhz</td>
+        <td>Helical antenna for 900mhz bands (SMA, straight) </td>
+        <td><a href="http://www.saelig.com/miva/merchant.mvc?Screen=PROD&Product_Code=RW005&Category_Code=ANT">Saelig</a></td>
+        <td>$8</td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">Stubby 900Mhz </td>
+        <td>Helical antenna for 900mhz bands (SMA, straight) </td>
+        <td><a href="http://www.saelig.com/miva/merchant.mvc?Screen=PROD&Product_Code=ANT006&Category_Code=ANT">Saelig</a></td>
+        <td>$3</td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">Dual 900/1800 </td>
+        <td>Helical antenna for 900mhz and 1800Mhz bands (SMA, straight) </td>
+        <td><a href="http://www.saelig.com/miva/merchant.mvc?Screen=PROD&Product_Code=ANT008&Category_Code=ANT">Saelig</a></td>
+        <td>$6</td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF"><a href="http://www.sparkfun.com/datasheets/Cellular%20Modules/GSM%20Antenna-850-1900.pdf">&quot;Quad band antenna&quot; </a></td>
+        <td>Helical antenna for all GSM cell bands (SMA, right angle) </td>
+        <td><a href="http://www.sparkfun.com/commerce/product_info.php?products_id=675">SparkFun </a></td>
+        <td>$4.95</td>
+      </tr>
+      <tr>
+        <td bgcolor="#FFFFFF">&nbsp;</td>
+        <td>1/4 wave 2.4GHz antenna </td>
+        <td><a href="http://www.digikey.com/scripts/DkSearch/dksus.dll?PName?Name=553-1309-ND&Site=US">Digikey</a><br>
+        pretty much everywhere</td>
+        <td>~$5</td>
+      </tr>
+    </table>
+  <!-- InstanceEndEditable --> </div>
+  <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+  <div class="textblockheader"> <!-- InstanceBeginEditable name="Header" -->Cell bands <!-- InstanceEndEditable --> </div>
+  <div class="textblock"> <!-- InstanceBeginEditable name="text" -->
+    <table width="100%"  border="1" cellpadding="5">
+      <tr>
+        <th width="27%" scope="col">Name/Description</th>
+        <th width="22%" scope="col">Freq. Band </th>
+        <th width="51%" scope="col">Notes</th>
+      </tr>
+      <tr>
+        <th scope="row">GSM 850 Downlink</th>
+        <td>870-894MHz</td>
+        <td>Starting to become more popular, but used more in rural areas in the US. </td>
+      </tr>
+      <tr>
+        <th scope="row">GSM 900 Downlink </th>
+        <td>925-960MHz</td>
+        <td>Original &amp; most common frequency band used in Europe. </td>
+      </tr>
+      <tr>
+        <th scope="row">GSM 1800 Downlink </th>
+        <td>1805-1880MHz</td>
+        <td>Starting to become more popular in Europe. </td>
+      </tr>
+      <tr>
+        <th scope="row">GSM (PCS) Broadband 1900 Downlink</th>
+        <td>1930-1990MHz</td>
+        <td>Original &amp; most common frequency band used in the US.</td>
+      </tr>
+    </table><!-- InstanceEndEditable --> </div>
+  <!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+  <div class="textblockheader"> <!-- InstanceBeginEditable name="Header" -->Other bands <!-- InstanceEndEditable --> </div>
+  <div class="textblock"> <!-- InstanceBeginEditable name="text" -->
+    <table width="100%"  border="1" cellpadding="5">
+      <tr>
+        <th width="27%" scope="col">Name/Description</th>
+        <th width="22%" scope="col">Freq. Band </th>
+        <th width="51%" scope="col">Notes</th>
+      </tr>
+      <tr>
+        <th scope="row">Cordless Phones </th>
+        <td>900-910MHz (handset)  920-930MHz (base)</td>
+        <td>900MHz band cordless phones </td>
+      </tr>
+      <tr>
+        <th scope="row">Bluetooth</th>
+        <td> 2400-2483MHz</td>
+        <td>Headsets, small electronics </td>
+      </tr>
+      <tr>
+        <th scope="row">802.11b/g</th>
+        <td>2400-2483MHz</td>
+        <td>Generic WiFi</td>
+      </tr>
+      <tr>
+        <th scope="row">ZigBee</th>
+        <td>868 (Europe) 915 (USA) and 2400-2483MHz </td>
+        <td>Some home automation stuff</td>
+      </tr>
+      <tr>
+        <th scope="row">GPS</th>
+        <td><p>1575.42 MHz and 1227.6 MHz (civilian) </p>
+            <p>1227.6 MHz (military) </p></td>
+        <td>Global Positioning System </td>
+      </tr>
+    </table>
+  <!-- InstanceEndEditable --> </div>
+  <!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat --></div>
+
+<div id="rightcol">
+<!-- this is just a buffer -->
+</div>
+
+
+
+<div id="history">
+<!-- #BeginDate format:Am1m -->May 17, 2011  20:07<!-- #EndDate --></div>
+
+</body>
+<!-- InstanceEnd --></html>
